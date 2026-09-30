@@ -3,3 +3,8 @@ product: jvm/app
 dependencies:
   - $libs.datetime.jvm
   - $libs.mordant
+
+settings:
+  jvm:
+    jdk:
+      version: 21
