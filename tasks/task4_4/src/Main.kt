@@ -25,6 +25,7 @@ fun main(args: Array<String>) {
 
     var c = initTemp
     var f = 0.0
+    var i = 1
 
     val t = Terminal()
     t.println(table {
@@ -35,25 +36,28 @@ fun main(args: Array<String>) {
 
         header {
             column(0) {
-                style = white + red.bg + bold
+                style = white + rgb("#C62828").bg + bold
             }
             column(1) {
-                style = white + brightBlue.bg + bold
+                style = white + rgb("#1565C0").bg + bold
             }
             row("\nCELSIUS (°C)\n", "\nFAHRENHEIT (°F)\n")
             }
 
         body {
-            column(0) {
-                style = black + rgb("#ff7373").bg
-            }
-            column(1) {
-                style = black + rgb("#8adaff").bg
-            }
             while (c <= maxTemp) {
                 f = ((c * 9/5) + 32)
-                row("\n%.1f\n".format(c), "\n%.1f\n".format(f))
+                //row("\n%.1f\n".format(c), "\n%.1f\n".format(f))
+                row {
+                    cell("\n%.1f\n".format(c)) {
+                        style = if (i % 2 == 0) black + rgb("#EF9A9A").bg else black + rgb("#E57373").bg
+                    }
+                    cell("\n%.1f\n".format(f)) {
+                        style = if (i % 2 == 0) black + rgb("#90CAF9").bg else black + rgb("#64B5F6").bg
+                    }
+                }
                 c += incrTemp
+                i++
             }
         }
     })
