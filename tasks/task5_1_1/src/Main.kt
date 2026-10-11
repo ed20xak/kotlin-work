@@ -11,6 +11,6 @@ fun main(args: Array<String>) {
         println("Your words are anagrams of each other.")
     }
     else {
-        println("Your words are NOT anagrams of each other")
+        println("Your words are NOT anagrams of each other.")
     }
 }
