@@ -51,22 +51,22 @@ class GradeTest {
     }
 
     @Test
-    fun `Mark of 101 gives a ?` () {
+    fun `Mark of 101 is invalid` () {
         assertEquals("?", grade(101))
     }
 
     @Test
-    fun `Mark of 125 gives a ?` () {
+    fun `Mark of 125 is invalid` () {
         assertEquals("?", grade(125))
     }
 
     @Test
-    fun `Mark of -1 gives a ?` () {
+    fun `Mark of -1 is invalid` () {
         assertEquals("?", grade(-1))
     }
 
     @Test
-    fun `Mark of -25 gives a ?` () {
+    fun `Mark of -25 is invalid` () {
         assertEquals("?", grade(-25))
     }
 }
