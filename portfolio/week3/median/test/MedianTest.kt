@@ -21,6 +21,7 @@ class MedianTest : FreeSpec({
         val numbers = listOf(20.5f)
         median(numbers) shouldBe (20.5f plusOrMinus tolerance)
     }
+    
     "List {20.5, 10.0} containing 2 elements has a median of 15.25" {
         val numbers = listOf(20.5f, 10.0f)
         median(numbers) shouldBe (15.25f plusOrMinus tolerance)
