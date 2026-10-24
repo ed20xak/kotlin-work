@@ -8,4 +8,4 @@ class Point:
 
     def distance(self): return hypot(self.x, self.y)
 
-    def distanceTo(self, p): return hypot(self.x-p.x, self.y-p.y)
+    def distanceTo(self, p): return hypot(self.x - p.x, self.y - p.y)
