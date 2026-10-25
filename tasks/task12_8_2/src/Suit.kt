@@ -1,5 +1,5 @@
 // Task 12.8.2: enum class for playing card suits
-
+/* 
 enum class Suit(val symbol: Char) {
     Clubs('♣'),
     Diamonds('♦'),
@@ -10,3 +10,4 @@ enum class Suit(val symbol: Char) {
 
     override fun toString() = "$symbol"
 }
+*/
